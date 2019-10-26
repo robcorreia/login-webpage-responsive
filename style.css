@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #234BBA;
+  letter-spacing: 1px;
+  margin-top: 230px;
+  margin-left: 30px;
+}
+
+p {
+  margin: 10px 0 0 30px;
+  color: #596275;
+  
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  top: 50%;
+  left: 0;
+  position: absolute;
+  display: flex;
+  margin-top: 30px;
+  transform: translateY(-50%);
+}
+
+.form input {
+  border: none;
+  border-bottom: 2px solid #234BBA;
+  position: relative;
+  padding: 5px 10px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #596275;
+  margin: 5px 10px;
+  display: flex;
+  transition: border .5s;
+}
+
+.form input:focus {
+  border-color: #341f97;
+}
+
+.form input::placeholder {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #596275;
+}
+
+.form .btn {
+  border: none;
+  padding: 8px 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #341f97, #234BBA, #341f97);
+  cursor: pointer;
+  background-size: 200%;
+  transition: background .5s, opacity .5s;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.form .btn:hover {
+  background-size: 100%;
+  opacity: .9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+aside {
+  height: 100vh;
+  background: url(bkg-2.svg) center center no-repeat;
+  background-size: 85%;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  
+  .container {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  h1 {
+    margin: 40px 0 0 0;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .form {
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    top: initial;
+    transform: initial;
+    max-width: 400px;
+  }
+
+  .form input {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .form .btn {
+    margin: 0 auto;
+    display: block;
+  }
+
+  aside {
+    padding: 0;
+    height: 50vh;
+  }
+}
